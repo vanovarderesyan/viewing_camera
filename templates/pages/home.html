@@ -1,0 +1,49 @@
+{% extends 'frontend/layouts/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "pages/nav.html" %}
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+
+
+                </nav>
+
+    
+
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="row">
+
+                        {% include "pages/camera.html" %}
+                    </div>
+                <!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+  </body>
+
+{% endblock content %}

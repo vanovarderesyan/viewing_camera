@@ -1,0 +1,28 @@
+
+{% block extrahead %}
+<script type="text/javascript" charset="utf-8">
+
+    function formatState(state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "/static/assets";
+        var $state = $(
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+
+  $(function () {
+       $('.languages').select2({
+        minimumResultsForSearch: -1,
+        templateResult: formatState,
+        templateSelection: formatState,
+    }).on("change", function (e) { 
+        $(`.languages option[value=${this.value}]`).attr('selected','selected');
+        $('#languageForm').submit();;
+
+    })
+  })
+</script>
+{% endblock %}

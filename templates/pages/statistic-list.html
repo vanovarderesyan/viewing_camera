@@ -1,0 +1,43 @@
+{% load static %}
+
+<div class="container-fluid">
+
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Camera 1 motion</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Start motion</th>
+                            <th>End motion</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Index</th>
+                            <th>Start motion</th>
+                            <th>End motion</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+
+                        {% for i in data  %}
+                        <tr>
+                            <td>{{i.pk}}</td>
+                            <td>{{i.start_time}}</td>
+                            <td>{{i.end_time}}</td>
+                        </tr>
+                       {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
